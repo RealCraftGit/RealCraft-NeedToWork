@@ -129,8 +129,10 @@ background-color: black;
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>Benutzername</label><br><br>
-                            <input type="text" name="username" class="unFill <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-
+                            <input list="Tables" name="username"  class="unFill <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                            <datalist id="Tables">
+                                <option value="A"></option><option value="B"></option><option value="C"></option><option value="D"></option><option value="E"></option><option value="SAUSE"></option><option value="BLACK"></option><option value="SPACE"></option><option value="COCKTAIL"></option><option value="ALM"></option><option value="TREPPE"></option><option value="EMPORE"></option>
+                            </datalist>
                             <span class="invalid-feedback"><?php echo $username_err; ?></span>
                         </div>
                         <div class="form-group">
